@@ -57,9 +57,15 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.19
         version: 18.2.19
+      common:
+        specifier: workspace:*
+        version: link:../../packages/common
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
+      math-helpers:
+        specifier: workspace:*
+        version: link:../../packages/math-helper
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -107,6 +113,15 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
+  packages/common:
+    dependencies:
+      typescript:
+        specifier: latest
+        version: 5.4.2
+      zod:
+        specifier: latest
+        version: 3.22.4
+
   packages/eslint-config:
     devDependencies:
       '@typescript-eslint/eslint-plugin':
@@ -130,6 +145,12 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
+
+  packages/math-helper:
+    dependencies:
+      typescript:
+        specifier: latest
+        version: 5.4.2
 
   packages/typescript-config: {}
 
@@ -1981,6 +2002,7 @@ packages:
 
   /eslint-config-prettier@9.1.0(eslint@8.57.0):
     resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
+    hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
@@ -3486,6 +3508,7 @@ packages:
   /next@14.1.1(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-McrGJqlGSHeaz2yTRPkEucxQKe5Zq7uPwyeHNmJaZNY4wx9E9QdxmTp310agFRoMuIYgQrCrT3petg13fSVOww==}
     engines: {node: '>=18.17.0'}
+    hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
       react: ^18.2.0
@@ -4543,6 +4566,7 @@ packages:
 
   /ts-node@10.9.1(@types/node@20.11.24)(typescript@5.3.3):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
+    hasBin: true
     peerDependencies:
       '@swc/core': '>=1.2.50'
       '@swc/wasm': '>=1.2.50'
@@ -4727,6 +4751,12 @@ packages:
     engines: {node: '>=14.17'}
     dev: true
 
+  /typescript@5.4.2:
+    resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: false
+
   /uglify-js@3.17.4:
     resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
     engines: {node: '>=0.8.0'}
@@ -4764,6 +4794,7 @@ packages:
 
   /update-browserslist-db@1.0.13(browserslist@4.22.1):
     resolution: {integrity: sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==}
+    hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
     dependencies:
@@ -4930,3 +4961,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+    dev: false
